@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="inParkingContext" prefHeight="600.0" prefWidth="878.0" style="-fx-background-color: #b2bec3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InParkingController">
+   <children>
+      <ComboBox fx:id="cmbInParkingOnDelivery" layoutX="34.0" layoutY="70.0" prefHeight="53.0" prefWidth="290.0" style="-fx-background-radius: 12;" />
+      <JFXButton buttonType="RAISED" layoutX="342.0" layoutY="70.0" onAction="#openAddVehicle" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #00008B;" text="Add Vehicle" textFill="#eee8e8">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="530.0" layoutY="70.0" onAction="#openAddDriver" prefHeight="53.0" prefWidth="162.0" style="-fx-background-color: #00008B;" text="Add Driver" textFill="#f2e8e8">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="712.0" layoutY="70.0" onAction="#closeParking" prefHeight="53.0" prefWidth="152.0" style="-fx-background-color: #444444;" text="Log Out" textFill="#f5efef">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></JFXButton>
+      <TableView fx:id="tblInParking" layoutX="9.0" layoutY="167.0" prefHeight="421.0" prefWidth="863.0" visible="false">
+        <columns>
+          <TableColumn fx:id="colVehicleNum" prefWidth="198.0" text="Vehicle Number" />
+          <TableColumn fx:id="colVehicleType" prefWidth="162.0" text="Vehicle Type" />
+            <TableColumn fx:id="colParkingSlot" prefWidth="202.0" text="Parking Slot" />
+            <TableColumn fx:id="colParkedTime" prefWidth="194.0" text="Parked Time" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblOnDelivery" layoutX="8.0" layoutY="167.0" prefHeight="421.0" prefWidth="863.0">
+        <columns>
+          <TableColumn fx:id="colNumber" prefWidth="208.0" text="Vehicle Number" />
+          <TableColumn fx:id="colType" prefWidth="202.0" text="Vehicle Type" />
+            <TableColumn fx:id="colDriverName" prefWidth="219.0" text="Driver Name" />
+            <TableColumn fx:id="colLeftTime" prefWidth="230.0" text="Left Time" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
