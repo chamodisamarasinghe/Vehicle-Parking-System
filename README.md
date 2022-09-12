@@ -1,16 +1,5 @@
 <<<<<<< HEAD
 
-
-
-
-
-
-
-
-<img src="src/assets/Log.png">
-
-
-=======
 # Vehicle-Parking-System
 Course work for OOP
 
